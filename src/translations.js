@@ -5,11 +5,11 @@ export const translations = {
     appSubtitle: "Pro",
     appDescription: "Experience weather like never before with real-time data, beautiful visuals, and personalized forecasts for any location worldwide",
     fetchingWeather: "fetching latest weather data...",
-    
+
     // SearchBar
     searchPlaceholder: "Search for a city",
     searchCities: "Search Cities...",
-    
+
     // WeatherCard
     wind: "Wind",
     humidity: "Humidity",
@@ -20,15 +20,15 @@ export const translations = {
     sunset: "Sunset",
     high: "H",
     low: "L",
-    
+
     // WeatherForecast
     forecastTitle: "5 Day Forecast",
     today: "Today",
-    
+
     // ErrorMessage
     errorTitle: "Something went wrong",
     errorRetry: "Retry",
-    
+
     // Weather Descriptions
     weatherDescriptions: {
       "clear sky": "Clear sky",
@@ -95,15 +95,15 @@ export const translations = {
   },
   vi: {
     // App.jsx
-    appTitle: "Thời tiết",
+    appTitle: "Dự báo thời tiết",
     appSubtitle: "Pro",
     appDescription: "Trải nghiệm thời tiết chưa từng có với dữ liệu thời gian thực, hình ảnh đẹp mắt và dự báo cá nhân hóa cho bất kỳ địa điểm nào trên thế giới",
     fetchingWeather: "đang tải dữ liệu thời tiết mới nhất...",
-    
+
     // SearchBar
     searchPlaceholder: "Tìm kiếm thành phố",
     searchCities: "Đang tìm kiếm...",
-    
+
     // WeatherCard
     wind: "Gió",
     humidity: "Độ ẩm",
@@ -114,15 +114,15 @@ export const translations = {
     sunset: "Hoàng hôn",
     high: "Cao",
     low: "Thấp",
-    
+
     // WeatherForecast
     forecastTitle: "Dự báo 5 ngày",
     today: "Hôm nay",
-    
+
     // ErrorMessage
     errorTitle: "Đã xảy ra lỗi",
     errorRetry: "Thử lại",
-    
+
     // Weather Descriptions
     weatherDescriptions: {
       "clear sky": "Trời quang",
