@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, Droplets } from "lucide-react";
+import { Calendar, CloudRain } from "lucide-react";
 import * as LucideIcons from "lucide-react";
 import { formatDate, formatTemperature, getWeatherIcon } from "../utils/weatherutils";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -22,14 +22,14 @@ export const WeatherForecast = ({ forecast, units }) => {
 
   return (
     <div
-      className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20
-    shadow-2xl"
+      className="bg-black/20 backdrop-blur-xl rounded-3xl p-8 border border-white/20
+    shadow-2xl h-[100%]"
     >
       <div className="flex items-center space-x-3 mb-8">
         <div className="p-2 rounded-full bg-white/10">
           <Calendar className="w-6 h-6 text-white/80" />
         </div>
-        <h2>{t('forecastTitle')}</h2>
+        <h2 className="font-bold text-white/80 text-2xl">{t('forecastTitle')}</h2>
       </div>
 
       <div className="space-y-4">
@@ -63,7 +63,7 @@ export const WeatherForecast = ({ forecast, units }) => {
           </div>
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2 text-white/60">
-              <Droplets className=" w-4 h-4 text-white/60" />
+              < CloudRain className=" w-4 h-4 text-white/60" />
               <span className="text-sm font-medium">
                 {/* Dynamic Details */}
                 {Math.round(item.pop * 100)}%

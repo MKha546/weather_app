@@ -1,16 +1,18 @@
+// import axios from "axios";
+
 const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 const GEO_URL = "https://api.openweathermap.org/geo/1.0";
 
 // Debug: Log API key status (remove in production)
-if (!API_KEY) {
+/* if (!API_KEY) {
     console.error("❌ API_KEY is missing! Check your .env file.");
 } else {
     console.log("✅ API_KEY loaded:", API_KEY.substring(0, 8) + "..." + API_KEY.substring(API_KEY.length - 4));
-}
+} */
+
 
 export const getCurrentWeather = async (city) => {
-
     try {
         const response = await fetch(`${BASE_URL}/weather?q=${city}&appid=${API_KEY}&units=metric`);
         if (!response.ok) {
@@ -121,3 +123,92 @@ export const searchCities = async (query) => {
     }
 }
 
+
+/* const weatherClient = axios.create({
+    baseURL: BASE_URL,
+    params: {
+        appid: API_KEY,
+        units: "metric",
+    },
+});
+
+const geoClient = axios.create({
+    baseURL: GEO_URL,
+    params: {
+        appid: API_KEY,
+    },
+});
+
+const handleAxiosError = (error) => {
+    if (error.response) {
+        const { status } = error.response;
+        if (status === 404) {
+            throw new Error("City not found, please check the city name and try again.");
+        }
+        if (status === 401) {
+            throw new Error("Invalid API key, please check your API key and try again.");
+        }
+        throw new Error("Weather service is temporarily unavailable, please try again later.");
+    }
+    if (error.request) {
+        throw new Error("Network error. Please check your internet connection and try again.");
+    }
+    throw error;
+};
+
+export const getCurrentWeather = async (city) => {
+    try {
+        const { data } = await weatherClient.get("/weather", {
+            params: { q: city },
+        });
+        if (!data.dt) {
+            data.dt = Math.floor(Date.now() / 1000);
+        }
+        return data;
+    } catch (error) {
+        handleAxiosError(error);
+    }
+};
+
+export const getCurrentWeatherByCoords = async (lat, lon) => {
+    try {
+        const { data } = await weatherClient.get("/weather", {
+            params: { lat, lon },
+        });
+        if (!data.dt) {
+            data.dt = Math.floor(Date.now() / 1000);
+        }
+        return data;
+    } catch (error) {
+        handleAxiosError(error);
+    }
+};
+
+export const getCurrentWeatherForecast = async (city) => {
+    try {
+        const { data } = await weatherClient.get("/forecast", {
+            params: { q: city },
+        });
+        return data;
+    } catch (error) {
+        handleAxiosError(error);
+    }
+};
+
+export const searchCities = async (query) => {
+    try {
+        const { data } = await geoClient.get("/direct", {
+            params: { q: query, limit: 5 },
+        });
+        return data.map((city) => ({
+            name: city.name,
+            lat: city.lat,
+            lon: city.lon,
+            country: city.country,
+            state: city.state || "",
+        }));
+    } catch (error) {
+        handleAxiosError(error);
+    }
+};
+ */

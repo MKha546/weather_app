@@ -55,8 +55,8 @@ export function WeatherCard({ weather, units }) {
   ];
   return (
     <div
-      className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl 
-                    p-8 shadow-2xl  hover:bg-white/5 transition-all duration-500"
+      className="bg-black/20 backdrop-blur-xl border border-white/20 rounded-3xl 
+                    p-8 shadow-2xl  transition-all duration-500 h-[100%] "
     >
       {/* Header  */}
       <div className="flex items-center justify-between mb-8">
@@ -97,7 +97,7 @@ export function WeatherCard({ weather, units }) {
         </div>
         <div className="text-white/90 transform scale-110 transition-transform duration-300">
           {/* Display Dynamic Weather Icon */}
-          <IconComponent size={20} className="drop-shadow-2xl" />
+          <IconComponent size={80} className="drop-shadow-2xl" />
         </div>
       </div>
       {/* Weather Stats Grid */}
@@ -108,7 +108,7 @@ export function WeatherCard({ weather, units }) {
         return (
           <div
             key={index}
-            className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/10 
+            className="bg-white/400 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/10 
             transition-all duration-300 group"
           >
             <div className="flex items-center space-x-3 mb-2">
@@ -133,7 +133,7 @@ export function WeatherCard({ weather, units }) {
       <div className="grid grid-cols-2 gap-4">
         <div
           className="bg-gradient-to-r from-orange-500/20 to-yellow-500/20
-        backdrop-blur-sm rounded-2xl p-4 border border-orange-400/20"
+        backdrop-blur-sm rounded-2xl p-4 border border-orange-400/20 hover:bg-white/10 "
         >
           <div className="flex items-center space-x-3 mb-2">
             <div className="p-2 rounded-full bg-orange-400/10">
@@ -149,7 +149,7 @@ export function WeatherCard({ weather, units }) {
 
         <div
           className="bg-gradient-to-r from-purple-500/20 to-pink-500/20
-        backdrop-blur-sm rounded-2xl p-4 border border-purple-400/20"
+        backdrop-blur-sm rounded-2xl p-4 border border-purple-400/20 hover:bg-white/10 "
         >
           <div className="flex items-center space-x-3 mb-2">
             <div className="p-2 rounded-full bg-purple-400/10">
